@@ -1,0 +1,17 @@
+# Ignorar arquivos desnecessários na build
+*.md
+.git
+.gitignore
+.env
+.env.example
+docker-compose.yml
+Dockerfile
+*.json
+*.pdf
+reports/
+projects/
+internal/
+cmd/
+go.mod
+go.sum
+*.go
