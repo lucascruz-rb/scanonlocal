@@ -11,12 +11,13 @@ dir_local/
         ├── manager = Responsável por detectar a quantidade de projetos e subir/derrubar N containers.
         └── scan_projetoN = Container temporário responsável pelo scan no projeto específicado (projetoN)
           ⚠️ A quantidade de containers UP estará de acordo com a quantidade de projetos adicionados no diretório de PROJETOS (configurado no .env)
-          projetos_dir/
-          ├── projeto1
-          └── projeto2
-          containers/
-          ├── manager
-              ├── scan_projeto1
-              └── scan_projeto2
+                EXEMPLO:
+                  projetos_dir/
+                  ├── projeto1
+                  └── projeto2
+                  containers/
+                  ├── manager
+                      ├── scan_projeto1
+                      └── scan_projeto2
 ```
 
