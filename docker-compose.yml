@@ -1,18 +1,21 @@
 services:
   scanonlocal:
-    image: wlucasdc/scanonlocal:v0.1
+    image: wlucasdc/scanonlocal:latest
     container_name: scanonlocal
+
     volumes:
-      - ${PROJECTS_DIR:-./projects}:/app/projects:ro
-      - ${REPORTS_DIR:-./reports}:/app/reports
+      - ${PROJECTS_DIR}:/app/projects:ro
+      - ${REPORTS_DIR}:/app/reports
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
+
     environment:
+      - PROJECTS_DIR=/app/projects
+      - REPORTS_DIR=/app/reports
       - DOCKER_HOST=unix:///var/run/docker.sock
     privileged: true
     network_mode: host
     restart: "no"
-    init: true
     deploy:
       resources:
         limits:
